@@ -1,0 +1,27 @@
+{
+  "geode": "4.6.0",
+  "gd": {
+    "win": "2.2074",
+    "android": "2.2074",
+    "mac": "2.2074",
+    "ios": "2.2074"
+  },
+  "id": "jesusofcc.frame-window-counter",
+  "name": "Frame Window Counter",
+  "version": "v1.0.0",
+  "developer": "jesusofcc",
+  "description": "Shows physics steps, frames since last click, hold length and the current gamemode for each player.",
+  "settings": {
+    "show-counter": { "type": "bool", "name": "Show counter", "default": true },
+    "ref-fps": {
+      "type": "int", "name": "Reference FPS", "default": 60, "min": 30, "max": 360,
+      "description": "Steps are also shown converted to frames at this FPS."
+    },
+    "label-opacity": {
+      "type": "int", "name": "Opacity", "default": 200, "min": 20, "max": 255
+    },
+    "label-scale": {
+      "type": "float", "name": "Scale", "default": 0.45, "min": 0.2, "max": 1.0
+    }
+  }
+}
