@@ -59,9 +59,10 @@ class $modify(FWCLayer, GJBaseGameLayer) {
         s.down = down;
     }
 
-    void processCommands(float dt) {
-        GJBaseGameLayer::processCommands(dt);
+    void processCommands(float dt, bool isHalfTick, bool isLastTick) {
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
         if (PlayLayer::get() != reinterpret_cast<PlayLayer*>(this)) return;
+        if (isHalfTick) return;
 
         g_steps++;
         for (auto& s : g_p) {
